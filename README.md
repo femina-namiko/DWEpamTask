@@ -25,7 +25,7 @@ The "Calendar" dimension table contains all the dates from some point in the pas
  1b) The business key is the attribute that is known in the operational system by the business users. 
 
 - The business key in "Product" dimension let's use the string format of product code such PC0000 (It is meaningfull to get this information from bussiness side. It should be information that is undestandable for bussiness)
-- The business key in "Customer" dimension let's use the interger format 000000. (it is smth like number of customer's club card)
+- The business key in "Customer" dimension let's use the interger format 100000. (it is smth like number of customer's club card)
 - The business key in "Calendar" dimension for easy query development, an integer is provided taking the format YYYYMMDD and it maybe primary key simultaneously.
 
 1c) It's important to introduce also a surrogate key in the fact table. Sooner or later a fact table might in turn become a dimension table for another fact table. E.g. a fact table that holds measures for sales might act as a dimension for a fact table holding measures for individual transactions. Note: the Calendar dimension, as an exception, has no surrogate key due to the reason that the calendar table is populated with records only once at the start of your data warehouse project.
