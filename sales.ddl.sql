@@ -60,6 +60,16 @@ ADD CustomerID INT
 ALTER TABLE SalesDB.Sales.Sales
 ADD CalendarID INT 
 
+/* **************ADDING BUSSINESS KEYS*************** */
+
+--Adding column BK ProductCode to the table <Product>
+ALTER TABLE SalesDB.Sales.Product
+ADD ProductCode VARCHAR (50)
+
+--Adding column BK CustomerCode to the table <Customer>
+ALTER TABLE SalesDB.Sales.Customer
+ADD CustomerCode INT
+
 /* ****************CREATING REFERENCES******************* */
 
 -- Reference: sales_product between tables "sales" and "product"
