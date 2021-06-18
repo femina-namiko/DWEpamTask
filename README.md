@@ -2,7 +2,7 @@
 
 This is an illustration of star schema data model on an imaginary data warehouse for interview task at EPAM.
 
-/*************************************************************** TASK *************************************************************************************/
+/**************************************************** TASK ********************************************************/
 1. Considering the star schema model of DW with three tables: "Product", "Category", "Sales"
   a) Add at least one more dimension to the model
   b) Add Business Keys (Natural keys) to your dimensions
@@ -14,7 +14,7 @@ This is an illustration of star schema data model on an imaginary data warehouse
 6. Create a simple stored procedure, that would check if there are any duplicates in the PRODUCT table and delete them if occur. Add to git as well
 7. Prepare a simple Power BI dashboard that would present some analytics about your data
 
-/**************************************************************************** PROVIDING STEPS ************************************************************************/
+/*********************************************** PROVIDING STEPS ************************************************/
 
  1a) At the beginning I've already had the star schema model of DW with fact table "Sales" and two demancions: "Product" and "Category". The fact table "Sales" that holds the measures of sales process has already been defined. The columns for every foreign key that links the measures to the corresponding dimension rows has already been provided . Also here, a surrogate key is introduced in the fact table that will become the primary key of the table
 
