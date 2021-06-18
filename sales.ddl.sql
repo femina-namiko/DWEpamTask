@@ -9,7 +9,7 @@ DROP TABLE SalesDB.Sales.Calendar
 --Existed dimension <Product>
 CREATE TABLE SalesDB.Sales.Product
 (
-ID INT PRIMARY KEY IDENTITY(1,1),
+ID INT PRIMARY KEY,
 ProductName VARCHAR (50) NOT NULL,
 CategoryName VARCHAR (50) NOT NULL
 )
@@ -17,7 +17,7 @@ CategoryName VARCHAR (50) NOT NULL
 --Existed dimension <Category>
 CREATE TABLE SalesDB.Sales.Category
 (
-ID INT PRIMARY KEY IDENTITY(1,1),
+ID INT PRIMARY KEY,
 CategoryName VARCHAR (50) NOT NULL,
 Description VARCHAR (50)
 )
@@ -25,7 +25,7 @@ Description VARCHAR (50)
 --Existed fact table <Sales>
 CREATE TABLE SalesDB.Sales.Sales
 (
-ID INT PRIMARY KEY IDENTITY(1,1),
+ID INT PRIMARY KEY,
 ProductID INT NOT NULL,
 CategoryID INT NOT NULL,
 SalesValues INT
@@ -34,7 +34,7 @@ SalesValues INT
 --New added dimension <Customer>
 CREATE TABLE SalesDB.Sales.Customer
 (
-ID INT PRIMARY KEY IDENTITY(1,1),
+ID INT PRIMARY KEY,
 FirstName VARCHAR (50) NOT NULL,
 LastName VARCHAR (50) NOT NULL,
 Address VARCHAR (50),
@@ -45,7 +45,7 @@ Country VARCHAR (50)
 --New added dimension <Calendar>
 CREATE TABLE SalesDB.Sales.Calendar
 (
-ID INT PRIMARY KEY IDENTITY(1,1),
+ID INT PRIMARY KEY,
 CalendarDate VARCHAR (50) NOT NULL,
 CalendarYear VARCHAR (50),
 CalendarQuarter VARCHAR (50),
