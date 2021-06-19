@@ -34,4 +34,4 @@ The "Calendar" dimension table contains all the dates from some point in the pas
 3. The MS SQL Server Management Studio had already been installed.
 4. The DDL scripts that implement my data model has been being added to git as <sales.ddl.sql>
 5. The DML scripts that populate my model with some test data has been being added to git as <sales.dml.sql>
-6. 
+6. The stored procedure, that checks if there are any duplicates in the PRODUCT table and delete them if occure has been being added to git as <DelDubProduct Procedure>. According to it I suggest looking for the same name and category of product. The ProductCode is unique and if the product with difference ProductCode but the same Name and Category are occured that's mean smth wrong. This procedured also doesn't covered the choose of right row from the duplicated and references with fact table.
