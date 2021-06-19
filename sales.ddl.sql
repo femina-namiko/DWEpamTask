@@ -47,9 +47,9 @@ CREATE TABLE SalesDB.Sales.Calendar
 (
 ID INT PRIMARY KEY,
 CalendarDate VARCHAR (50) NOT NULL,
-CalendarYear VARCHAR (50),
-CalendarQuarter VARCHAR (50),
-CalendarMonth VARCHAR (50)
+CalendarYear INT,
+CalendarQuarter INT,
+CalendarMonth INT
 )
 
 --Adding FK CustomerID to the table of facts  
