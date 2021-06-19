@@ -1,0 +1,23 @@
+USE SalesDB
+GO
+CREATE PROCEDURE Sales.DelDubProduct   
+AS   
+WITH cte AS (
+    SELECT 
+        ID, 
+        ProductName, 
+        CategoryName, 
+        ProductCode, 
+        ROW_NUMBER() OVER (
+            PARTITION BY 
+                ProductName, 
+                CategoryName 
+            ORDER BY 
+                ProductName, 
+                CategoryName 
+        ) row_num
+     FROM 
+        SalesDB.Sales.Product
+)
+DELETE FROM cte
+WHERE row_num > 1;
