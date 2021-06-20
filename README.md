@@ -39,3 +39,17 @@ At least let's see the star model:
 4. The DDL scripts that implement my data model has been being added to git as <sales.ddl.sql>
 5. The DML scripts that populate my model with some test data has been being added to git as <sales.dml.sql>
 6. The stored procedure, that checks if there are any duplicates in the PRODUCT table and delete them if occure has been being added to git as <DelDubProduct Procedure>. According to it I suggest looking for the same name and category of product. The ProductCode is unique and if the product with difference ProductCode but the same Name and Category are occured that's mean smth wrong. This procedured also doesn't covered the choose of right row from the duplicated and references with fact table.
+
+7.At first I've downloaded the data from MS SQL Server to the PowerBI Desktop. According to the data with I have I've desided to prepare dashboard with such charts:
+   - The chart "Total Bike Sales" (Gouge type) shows Total Sales of whole period of data which we have by Category "Bike" 
+   - The chart "Book Sales b City" (Funnel type) shows Sales of books decreasing according to the amount of sales by City
+   - The chart "Total Sales by CustomerCode" (Matrix type) in DESC way gets a chance to analyze Sales of different categories of product (Book and Bike) according to the BC "CustomerCode"
+   - The chart "Bike Salese by City" (Donut type) shows the amount and percetage of Bike's selling according to the cities. 
+   - The chart "Total Monthly vs Average Sales per Customer"(Line and stacked column) shows Monthly Sales according to BK "CustomerCode" and although ratio to the average amounts.
+   - The chart "Country Sales by Category" (100 % Stacked bar type) shows the propotion of each country to the total amount of sales by Category.
+  
+ I also used such tools as "Measure"/"Quick Measure" to find Max Sales Value by Category.
+  
+  At least let's see the example of dashboard:
+  ![SalesDashboard](https://user-images.githubusercontent.com/39432736/122681557-21408000-d1f5-11eb-95d5-b1b8627561b4.png)
+  
