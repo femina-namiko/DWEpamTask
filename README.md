@@ -30,6 +30,10 @@ The "Calendar" dimension table contains all the dates from some point in the pas
 
 1c) It's important to introduce also a surrogate key in the fact table. Sooner or later a fact table might in turn become a dimension table for another fact table. E.g. a fact table that holds measures for sales might act as a dimension for a fact table holding measures for individual transactions. Note: the Calendar dimension, as an exception, has no surrogate key due to the reason that the calendar table is populated with records only once at the start of your data warehouse project.
 
+At least let's see the star model:
+![SalesDBModel](https://user-images.githubusercontent.com/39432736/122680652-9493c300-d1f0-11eb-913b-3540431d5d4e.png)
+
+
 2. I have already had account "femina-namiko" at github.com
 3. The MS SQL Server Management Studio had already been installed.
 4. The DDL scripts that implement my data model has been being added to git as <sales.ddl.sql>
